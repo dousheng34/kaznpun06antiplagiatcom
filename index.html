@@ -203,6 +203,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
 (function(){
+document.documentElement.style.cssText+=";overflow:auto!important;height:auto!important;";
+document.body.style.cssText+=";overflow:auto!important;height:auto!important;min-height:0!important;";
+var allDivs=document.querySelectorAll("div,section,main,article");
+allDivs.forEach(function(d){var s=window.getComputedStyle(d);if(s.height&&s.overflow==="hidden"&&parseInt(s.height)>400){d.style.overflow="auto";}});
 var u='https://raw.githubusercontent.com/dousheng34/kaznpun06antiplagiatcom/main/%D0%9C%D0%90%D0%9C%D0%98%D0%A0%D0%9E%D0%92%20%D0%94%D0%98%D0%90%D0%A1%20%D0%9D%D0%A3%D0%A0%D0%93%D0%98%D0%A1%D0%90%D0%95%D0%92%D0%98%D0%A7%20%D0%A4%D0%98%D0%9D%D0%90%D0%9B1%20(%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F).pdf';
 pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 var sc=window.innerWidth<600?1.2:1.6;
